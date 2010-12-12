@@ -1,46 +1,46 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">                 
-	<meta name="description" content="A list of the awesome food trucks serving Baton Rouge, LA">
-	<title>Baton Rouge Food Trucks</title> 
-	<!--[if IE]>
+  <meta charset="UTF-8">
+  <meta name="description" content="A list of the awesome food trucks serving Baton Rouge, LA">
+  <title>Baton Rouge Food Trucks</title>
+  <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->                                    
+  <![endif]-->
   <link rel="stylesheet" type="text/css" href="fonts/miso/stylesheet.css" />
   <link rel="stylesheet" type="text/css" href="fonts/bebas-neue/stylesheet.css" />
   <style type="text/css">
     header, footer, section { display: block; }
-    body { font-size: 14px; font-family: "Gill Sans", sans-serif; background: #EFEBDF; color: #333; }    
+    body { font-size: 14px; font-family: "Gill Sans", sans-serif; background: #EFEBDF; color: #333; }
     h1 { font-family: "BebasNeueRegular", serif; font-size: 96px; line-height: 120px; margin: 10px 0px 0px; text-transform: uppercase; color: #EE4422; text-shadow: 3px 3px 0px #fac9c0; }
     #container { width: 980px; margin: 0px auto; }
     header, footer { text-align: center; }
     header { margin: 40px 0px 20px; }
     header p { font-family: "MisoLight"; font-size: 48px; margin: 0px; text-transform: uppercase; color: #BB7766; }
-    a { text-decoration: none; color: #BB7766; }                                                                                                  
+    a { text-decoration: none; color: #BB7766; }
     #truck-info { width: 810px; margin: 0px auto; text-align: center; }
     .truck-list { list-style-type: none; margin: 0px; padding: 0px; text-align: left; overflow: hidden; }
-    .truck-list li { list-style-type: none; margin: 0px 0px 40px 0px; padding: 5px; overflow: hidden; }       
+    .truck-list li { list-style-type: none; margin: 0px 0px 40px 0px; padding: 5px; overflow: hidden; }
     .truck-list h2 { font-family: "BebasNeueRegular", sans-serif; font-size: 36px; line-height: 42px; float: left; margin: 0px; text-transform: uppercase; color: #333; }
-    .truck-list img { float: left; margin-right: 20px; width: 150px; height: 100px; }  
+    .truck-list img { float: left; margin-right: 20px; width: 150px; height: 100px; }
     .truck-list img { padding: 5px 5px 30px; background: #fefefe; border: 1px solid #fff); }
-    .truck-list img { -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25); -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25); box-shadow: 0 3px 6px rgba(0,0,0,.25); }              
+    .truck-list img { -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25); -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25); box-shadow: 0 3px 6px rgba(0,0,0,.25); }
     .truck-description { overflow: hidden; margin-top: 2px; }
     .latest-tweet { padding: 10px; margin: 20px 3px 0px 180px; background: #fff; position: relative; }
-    .latest-tweet { -webkit-box-shadow: 3px 3px 0px #fac9c0; -moz-box-shadow: 3px 3px 0px #fac9c0; box-shadow: 3px 3px 0px #fac9c0; }   
+    .latest-tweet { -webkit-box-shadow: 3px 3px 0px #fac9c0; -moz-box-shadow: 3px 3px 0px #fac9c0; box-shadow: 3px 3px 0px #fac9c0; }
     .latest-tweet:before {
-    	content: ' ';
-    	height: 0;
-    	position: absolute;
-    	width: 0;
-    	border: 10px solid transparent;
-    	border-bottom-color: #fff;
-    	top: -10px;                                         
-    	left: 20px;
-    	margin-top: -10px;                                                                                                      
-    }                                                                                                                                         
+      content: ' ';
+      height: 0;
+      position: absolute;
+      width: 0;
+      border: 10px solid transparent;
+      border-bottom-color: #fff;
+      top: -10px;
+      left: 20px;
+      margin-top: -10px;
+    }
     .tag { color: rgba(0,0,0,0.5); background: rgba(255,255,255,0.75); font-size: 12px; line-height: 14px; padding: 2px 6px 4px; margin: 5px 10px; float: left; }
-  </style>   
+  </style>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
   <script type="text/javascript">
 
@@ -55,50 +55,68 @@
     })();
 
   </script>
-  <script type="text/javascript">     
-  
+  <script type="text/javascript">
+
     $(document).ready(function(){
       $('.truck').each(function(){
         var twitter = $(this).find('a[data-twitter]').data('twitter');
-        $.ajax({
-          url: "http://api.twitter.com/1/statuses/user_timeline.json",
-          dataType: 'jsonp',
-          context: this,                                                  
-          data: ({
-            screen_name: twitter,
-            count: '1'
-          }),
-          success: function(data) {                                    
-            $(this).find('.latest-tweet').text(data[0].text);
-          }
-        })
+        // $.ajax({
+        //   url: "http://api.twitter.com/1/statuses/user_timeline.json",
+        //   dataType: 'jsonp',
+        //   context: this,
+        //   data: ({
+        //     screen_name: twitter,
+        //     count: '1'
+        //   }),
+        //   success: function(data) {
+        //     $(this).find('.latest-tweet').text(data[0].text);
+        //   }
+        // });
       });
-    });    
-  
+    });
+
   </script>
 </head>
-<body>                          
-  <div id="container">  
+<body>
+  <div id="container">
     <header>
       <p>an illustrated guide to</p>
       <h1>Baton Rouge Food Trucks</h1>
-    </header>        
+    </header>
     <section id="truck-info">
       <ul class="truck-list">
-        <li class="truck"> 
-          <img src="images/curbside.jpeg" />  
+        <% @trucks.each do |truck| %>
+          <li class="truck">
+            <%= image_tag truck.photo.url(:listing), :width => 150, :height => 100 %>
+            <div class="truck-description">
+              <h2><%= truck.name %></h2>
+              <span class="tag"><%= truck.category %></span>
+            </div>
+
+            <div class="truck-links">
+              <%== truck_links_for truck %>
+            </div>
+
+            <% if truck.twitter_username.present? %>
+              <div class="latest-tweet"></div>
+            <% end %>
+          </li>
+        <% end %>
+
+        <li class="truck">
+          <img src="images/curbside.jpeg" />
           <div class="truck-description">
             <h2>Curbside Truck</h2>
             <span class="tag">burgers &amp; fries</span>
           </div>
           <div class="truck-links">
-            <a data-twitter="curbsidetruck" href="http://twitter.com/curbsidetruck">@curbsidetruck</a> &amp;       
+            <a data-twitter="curbsidetruck" href="http://twitter.com/curbsidetruck">@curbsidetruck</a> &amp;
             <a href="http://www.weeatthestreet.com/">website</a>
           </p>
           <div class="latest-tweet"></div>
         </li>
-        <li class="truck"> 
-          <img src="http://placehold.it/150x100" />  
+        <li class="truck">
+          <img src="http://placehold.it/150x100" />
           <div class="truck-description">
             <h2>GOYaYa's</h2>
             <span class="tag">crepes</span>
@@ -107,8 +125,8 @@
           <a href="http://www.goyayas.com/">website</a>
           <div class="latest-tweet"></div>
         </li>
-        <li class="truck"> 
-          <img src="images/kickersbbq.jpeg" />  
+        <li class="truck">
+          <img src="images/kickersbbq.jpeg" />
           <div class="truck-description">
             <h2>Kickers BBQ</h2>
             <span class="tag">bbq</span>
@@ -117,18 +135,18 @@
           <a href="http://www.facebook.com/pages/Baton-Rouge-LA/Kickers-BBQ/159627860742945?v=wall">Facebook</a>
           <div class="latest-tweet"></div>
         </li>
-        <li class="truck"> 
-          <img src="http://placehold.it/150x100" />  
+        <li class="truck">
+          <img src="http://placehold.it/150x100" />
           <div class="truck-description">
             <h2>Latte e Miele</h2>
             <span class="tag">gelato</span>
           </div>
-          <a data-twitter="lemgelato" href="http://twitter.com/LeMGelato">@lemgelato</a> &amp;   
+          <a data-twitter="lemgelato" href="http://twitter.com/LeMGelato">@lemgelato</a> &amp;
           <a href="http://latteemielegelato.com/">website</a>
           <div class="latest-tweet"></div>
         </li>
-        <li class="truck"> 
-          <img src="images/ninjasnowballs.jpeg" />  
+        <li class="truck">
+          <img src="images/ninjasnowballs.jpeg" />
           <div class="truck-description">
             <h2>Ninja Snowballs</h2>
             <span class="tag">snowballs</span>
@@ -137,8 +155,8 @@
           <a href="http://www.facebook.com/ninjasnowballs">facebook</a>
           <div class="latest-tweet"></div>
         </li>
-        <li class="truck"> 
-          <img src="images/tacodepaco.jpeg" />  
+        <li class="truck">
+          <img src="images/tacodepaco.jpeg" />
           <div class="truck-description">
             <h2>Taco de Paco</h2>
             <span class="tag">tacos</span>
@@ -146,8 +164,8 @@
           <a data-twitter="tacodepaco" href="http://twitter.com/TacodePaco">@tacodepaco</a>
           <div class="latest-tweet"></div>
         </li>
-        <li class="truck"> 
-          <img src="images/acoffeetruck.jpeg" />  
+        <li class="truck">
+          <img src="images/acoffeetruck.jpeg" />
           <div class="truck-description">
             <h2>A Coffee Truck</h2>
             <span class="tag">coffee</span>
@@ -155,18 +173,18 @@
           <a data-twitter="acoffeetruck" href="http://twitter.com/ACoffeeTruck">@acoffeetruck</a>
           <div class="latest-tweet"></div>
         </li>
-      </ul>  
+      </ul>
     </section>
     <footer>
       Created by <a href="http://jacksonfox.org">Jackson Fox</a><br />
       <a href="mailto:jacksonfox@gmail.com?subject=Food Truck Suggestion">Want to add a truck to the list</a>?<br />
       Version 0.3
-  </div>  
+  </div>
   <!--
     Credits...
     CSS3 Polaroids: http://www.zurb.com/playground/css3-polaroids/ & http://line25.com/tutorials/how-to-create-a-pure-css-polaroid-photo-gallery
     Color Scheme: http://www.colourlovers.com/palette/164869/chili_octopus
     Fonts: Miso (http://www.fontsquirrel.com/fonts/Miso) & Bebas Neue (http://www.fontsquirrel.com/fonts/bebas-neue)
-  -->  
+  -->
 </body>
 </html>

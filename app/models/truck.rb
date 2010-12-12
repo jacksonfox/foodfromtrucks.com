@@ -3,5 +3,5 @@ class Truck < ActiveRecord::Base
 
   validates_presence_of :name, :user
 
-  has_attached_file :photo
+  has_attached_file :photo, :styles => { :listing => "150x100#" }
 end
