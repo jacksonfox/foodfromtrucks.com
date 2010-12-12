@@ -24,6 +24,14 @@
     <%= yield %>
 
     <footer>
+      <% if user_signed_in? %>
+        Signed in as <%= link_to current_user.email, edit_user_registration_path %> |
+        <%= link_to "Sign out", destroy_user_session_path %>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path %> |
+        <%= link_to "Sign in", new_user_session_path %>
+      <% end %>
+      </br />
       Created by <a href="http://jacksonfox.org">Jackson Fox</a><br />
       <%= link_to "Want to add a truck to the list?", new_truck_path %><br />
       Version 0.3
