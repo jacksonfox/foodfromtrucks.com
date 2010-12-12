@@ -51,7 +51,7 @@ FoodFromTrucks::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
 
-  resources :trucks, :only => [:index, :new]
+  resources :trucks, :only => [:index, :new, :create]
 
   root :to => "trucks#index"
 

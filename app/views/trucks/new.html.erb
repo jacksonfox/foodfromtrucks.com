@@ -1,0 +1,19 @@
+<section id="new-truck-form">
+  <h2>Add a Truck</h2>
+
+  <% semantic_form_for @truck, :html => { :multipart => true } do |form| %>
+    <% form.inputs do %>
+      <%= form.input :name %>
+      <%= form.input :category %>
+      <%= form.input :photo %>
+    <% end %>
+
+    <% form.inputs do %>
+      <%= form.input :website %>
+      <%= form.input :twitter_username %>
+      <%= form.input :facebook_url %>
+    <% end %>
+
+    <%= form.buttons %>
+  <% end %>
+</section>
