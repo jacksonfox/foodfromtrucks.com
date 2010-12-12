@@ -10,7 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101212222654) do
+ActiveRecord::Schema.define(:version => 20101212224304) do
+
+  create_table "trucks", :force => true do |t|
+    t.integer  "user_id",            :null => false
+    t.string   "name",               :null => false
+    t.string   "category"
+    t.string   "website"
+    t.string   "twitter_username"
+    t.string   "facebook_url"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.datetime "photo_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
