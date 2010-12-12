@@ -31,3 +31,6 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # end
 
 gem 'devise'
+gem 'shoulda'
+gem 'factory_girl'
+gem 'factory_girl_rails'
