@@ -1,0 +1,30 @@
+header, footer, section { display: block; }
+body { font-size: 14px; font-family: "Gill Sans", sans-serif; background: #EFEBDF; color: #333; }
+h1 { font-family: "BebasNeueRegular", serif; font-size: 96px; line-height: 120px; margin: 10px 0px 0px; text-transform: uppercase; color: #EE4422; text-shadow: 3px 3px 0px #fac9c0; }
+#container { width: 980px; margin: 0px auto; }
+header, footer { text-align: center; }
+header { margin: 40px 0px 20px; }
+header p { font-family: "MisoLight"; font-size: 48px; margin: 0px; text-transform: uppercase; color: #BB7766; }
+a { text-decoration: none; color: #BB7766; }
+#truck-info { width: 810px; margin: 0px auto; text-align: center; }
+.truck-list { list-style-type: none; margin: 0px; padding: 0px; text-align: left; overflow: hidden; }
+.truck-list li { list-style-type: none; margin: 0px 0px 40px 0px; padding: 5px; overflow: hidden; }
+.truck-list h2 { font-family: "BebasNeueRegular", sans-serif; font-size: 36px; line-height: 42px; float: left; margin: 0px; text-transform: uppercase; color: #333; }
+.truck-list img { float: left; margin-right: 20px; width: 150px; height: 100px; }
+.truck-list img { padding: 5px 5px 30px; background: #fefefe; border: 1px solid #fff); }
+.truck-list img { -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25); -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25); box-shadow: 0 3px 6px rgba(0,0,0,.25); }
+.truck-description { overflow: hidden; margin-top: 2px; }
+.latest-tweet { padding: 10px; margin: 20px 3px 0px 180px; background: #fff; position: relative; }
+.latest-tweet { -webkit-box-shadow: 3px 3px 0px #fac9c0; -moz-box-shadow: 3px 3px 0px #fac9c0; box-shadow: 3px 3px 0px #fac9c0; }
+.latest-tweet:before {
+  content: ' ';
+  height: 0;
+  position: absolute;
+  width: 0;
+  border: 10px solid transparent;
+  border-bottom-color: #fff;
+  top: -10px;
+  left: 20px;
+  margin-top: -10px;
+}
+.tag { color: rgba(0,0,0,0.5); background: rgba(255,255,255,0.75); font-size: 12px; line-height: 14px; padding: 2px 6px 4px; margin: 5px 10px; float: left; }
