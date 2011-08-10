@@ -10,15 +10,18 @@
   <link rel="stylesheet" type="text/css" href="fonts/miso/stylesheet.css" />
   <link rel="stylesheet" type="text/css" href="fonts/bebas-neue/stylesheet.css" />
   <style type="text/css">
-    header, footer, section { display: block; }
+    header, footer, section, nav { display: block; }
     body { font-size: 14px; font-family: "Gill Sans", sans-serif; background: #EFEBDF; color: #333; }    
     h1 { font-family: "BebasNeueRegular", serif; font-size: 96px; line-height: 120px; margin: 10px 0px 0px; text-transform: uppercase; color: #EE4422; text-shadow: 3px 3px 0px #fac9c0; }
     #container { width: 980px; margin: 0px auto; }
     header, footer { text-align: center; }
-    header { margin: 40px 0px 20px; }
+    header { margin: 40px 0px 0px; }
     header p { font-family: "MisoLight"; font-size: 48px; margin: 0px; text-transform: uppercase; color: #BB7766; }
     a { text-decoration: none; color: #BB7766; }                                                                                                  
-    #truck-info { width: 810px; margin: 0px auto; text-align: center; }
+    #truck-menu, #truck-info { width: 810px; margin: 0px auto; text-align: center; }
+    .truck-nav { list-style-type: none; margin: 0px 0px 40px; padding: 0px; overflow: hidden; }
+    .truck-nav li { display: inline-block; margin: 0px 0px 10px 0px; padding: 5px 10px; background: #fff; -webkit-border-radius: 5px; box-shadow: #fac9c0 1px 1px 0px; }
+    .truck-nav li + li { margin-left: 10px; }
     .truck-list { list-style-type: none; margin: 0px; padding: 0px; text-align: left; overflow: hidden; }
     .truck-list li { list-style-type: none; margin: 0px 0px 40px 0px; padding: 5px; overflow: hidden; }       
     .truck-list h2 { font-family: "BebasNeueRegular", sans-serif; font-size: 36px; line-height: 42px; float: left; margin: 0px; text-transform: uppercase; color: #333; }
@@ -42,6 +45,137 @@
     .tag { color: rgba(0,0,0,0.5); background: rgba(255,255,255,0.75); font-size: 12px; line-height: 14px; padding: 2px 6px 4px; margin: 5px 10px; float: left; }
   </style>   
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+</head>
+<body>                          
+  <div id="container">  
+    <header>
+      <p>an illustrated guide to</p>
+      <h1>Baton Rouge Food Trucks</h1>
+    </header>   
+    <nav id="truck-menu">
+      <ul class="truck-nav">
+        <li><a href="#curbside">Curbside Truck</a></li>
+        <li><a href="#goyayas">GoYaYa's</a></li>
+        <li><a href="#kickers">Kicker's BBQ</a></li>
+        <li><a href="#tacodepaco">Taco de Paco</a></li>
+        <li><a href="#acoffeetruck">A Coffee Truck</a></li>
+        <li><a href="#salivationstation">Salivation Station</a></li>
+        <li><a href="#threebones">Three Bones Catering</a></li>
+        <li><a href="#latteemiele">Latte E Miele</a></li>
+        <li><a href="#ninjasnowballs">Ninja Snowballs</a></li>
+        <li><a href="#geauxyo">Geaux-Yo</a></li>
+      </ul>
+    </nav>     
+    <section id="truck-info">
+      <ul class="truck-list">
+        <li id="curbside" class="truck"> 
+          <img src="images/curbside.jpeg" />  
+          <div class="truck-description">
+            <h2>Curbside Truck</h2>
+            <span class="tag">burgers &amp; fries</span>
+          </div>
+          <div class="truck-links">
+            <a data-twitter="curbsidetruck" href="http://twitter.com/curbsidetruck">@curbsidetruck</a> &amp;       
+            <a href="http://www.weeatthestreet.com/">website</a>
+          </p>
+          <div class="latest-tweet"></div>
+        </li>
+        <li id="goyayas" class="truck"> 
+          <img src="images/goyayas.jpg" />  
+          <div class="truck-description">
+            <h2>GOYaYa's</h2>
+            <span class="tag">crepes</span>
+          </div>
+          <a data-twitter="goyayas" href="http://twitter.com/GOyayas">@goyayas</a> &amp;
+          <a href="http://www.goyayas.com/">website</a> &amp;
+          <a href="http://www.facebook.com/profile.php?id=1793436114">Facebook</a>
+          <div class="latest-tweet"></div>
+        </li>
+        <li id="kickers" class="truck"> 
+          <img src="images/kickersbbq.jpeg" />  
+          <div class="truck-description">
+            <h2>Kickers BBQ</h2>
+            <span class="tag">bbq</span>
+          </div>
+          <a data-twitter="kickersbbq" href="http://twitter.com/KickersBBQ">@kickersbbq</a> &amp;
+          <a href="http://www.facebook.com/pages/Baton-Rouge-LA/Kickers-BBQ/159627860742945?v=wall">Facebook</a>
+          <div class="latest-tweet"></div>
+        </li>
+        <li id="tacodepaco" class="truck"> 
+          <img src="images/tacodepaco.jpeg" />  
+          <div class="truck-description">
+            <h2>Taco de Paco</h2>
+            <span class="tag">tacos</span>
+          </div>
+          <a data-twitter="tacodepaco" href="http://twitter.com/TacodePaco">@tacodepaco</a>
+          <div class="latest-tweet"></div>
+        </li>
+        <li id="ninjasnowballs" class="truck"> 
+          <img src="images/ninjasnowballs.jpeg" />  
+          <div class="truck-description">
+            <h2>Ninja Snowballs</h2>
+            <span class="tag">snowballs</span>
+          </div>
+          <a data-twitter="ninjasnowballs" href="http://twitter.com/NinjaSnowballs">@ninjasnowballs</a> &amp;
+          <a href="http://www.facebook.com/ninjasnowballs">facebook</a>
+          <div class="latest-tweet"></div>
+        </li>
+        <li id="geauxyo" class="truck"> 
+          <img src="http://placehold.it/150x100" />  
+          <div class="truck-description">
+            <h2>Geaux-Yo</h2>
+            <span class="tag">frozen yogurt</span>
+          </div>
+          <a data-twitter="geauxyo" href="http://twitter.com/geauxyo">@ninjasnowballs</a> &amp;
+          <a href="http://www.facebook.com/geauxyo">facebook</a> &amp;
+          <a href="http://geauxyo.com/">website</a>
+          <div class="latest-tweet"></div>
+        </li>
+        <li id="salivationstation" class="truck"> 
+          <img src="http://placehold.it/150x100" />  
+          <div class="truck-description">
+            <h2>Salivation Station</h2>
+            <span class="tag">wraps &amp; sandwiches</span>
+          </div>
+          <a data-twitter="brfoodtruck" href="http://twitter.com/brfoodtruck">@brfoodtruck</a>
+          <div class="latest-tweet"></div>
+        </li>
+        <li id="threebonescatering" class="truck"> 
+          <img src="images/threebones.jpg" />  
+          <div class="truck-description">
+            <h2>Three Bones Catering</h2>
+            <span class="tag">cajun</span>
+          </div>
+          <a data-twitter="ThreeBonesCater" href="http://twitter.com/ThreeBonesCater">@ThreeBonesCater</a> &amp;
+          <a href="http://www.facebook.com/pages/Three-Bones-Catering-Company/110618055666641">Facebook</a>
+          <div class="latest-tweet"></div>
+        </li>
+        <li id="acoffeetruck" class="truck"> 
+          <img src="images/acoffeetruck.jpg" />  
+          <div class="truck-description">
+            <h2>A Coffee Truck</h2>
+            <span class="tag">coffee</span>
+          </div>
+          <a data-twitter="acoffeetruck" href="http://twitter.com/ACoffeeTruck">@acoffeetruck</a>
+          <div class="latest-tweet"></div>
+        </li>
+        <li id="latteemiele" class="truck"> 
+          <img src="http://placehold.it/150x100" />  
+          <div class="truck-description">
+            <h2>Latte e Miele</h2>
+            <span class="tag">gelato</span>
+          </div>
+          <a data-twitter="lemgelato" href="http://twitter.com/LeMGelato">@lemgelato</a> &amp;   
+          <a href="http://latteemielegelato.com/">website</a>
+          <div class="latest-tweet"></div>
+        </li>
+      </ul>  
+    </section>
+    <footer>
+      Created by <a href="http://jacksonfox.org">Jackson Fox</a><br />
+      <a href="mailto:jacksonfox@gmail.com?subject=Food Truck Suggestion">Want to add a truck to the list</a>?<br />
+      Version 0.3
+  </div>  
   <script type="text/javascript">
 
     var _gaq = _gaq || [];
@@ -76,112 +210,6 @@
     });    
   
   </script>
-</head>
-<body>                          
-  <div id="container">  
-    <header>
-      <p>an illustrated guide to</p>
-      <h1>Baton Rouge Food Trucks</h1>
-    </header>        
-    <section id="truck-info">
-      <ul class="truck-list">
-        <li class="truck"> 
-          <img src="images/curbside.jpeg" />  
-          <div class="truck-description">
-            <h2>Curbside Truck</h2>
-            <span class="tag">burgers &amp; fries</span>
-          </div>
-          <div class="truck-links">
-            <a data-twitter="curbsidetruck" href="http://twitter.com/curbsidetruck">@curbsidetruck</a> &amp;       
-            <a href="http://www.weeatthestreet.com/">website</a>
-          </p>
-          <div class="latest-tweet"></div>
-        </li>
-        <li class="truck"> 
-          <img src="images/goyayas.jpg" />  
-          <div class="truck-description">
-            <h2>GOYaYa's</h2>
-            <span class="tag">crepes</span>
-          </div>
-          <a data-twitter="goyayas" href="http://twitter.com/GOyayas">@goyayas</a> &amp;
-          <a href="http://www.goyayas.com/">website</a> &amp;
-          <a href="http://www.facebook.com/profile.php?id=1793436114">Facebook</a>
-          <div class="latest-tweet"></div>
-        </li>
-        <li class="truck"> 
-          <img src="images/kickersbbq.jpeg" />  
-          <div class="truck-description">
-            <h2>Kickers BBQ</h2>
-            <span class="tag">bbq</span>
-          </div>
-          <a data-twitter="kickersbbq" href="http://twitter.com/KickersBBQ">@kickersbbq</a> &amp;
-          <a href="http://www.facebook.com/pages/Baton-Rouge-LA/Kickers-BBQ/159627860742945?v=wall">Facebook</a>
-          <div class="latest-tweet"></div>
-        </li>
-        <li class="truck"> 
-          <img src="images/tacodepaco.jpeg" />  
-          <div class="truck-description">
-            <h2>Taco de Paco</h2>
-            <span class="tag">tacos</span>
-          </div>
-          <a data-twitter="tacodepaco" href="http://twitter.com/TacodePaco">@tacodepaco</a>
-          <div class="latest-tweet"></div>
-        </li>
-        <li class="truck"> 
-          <img src="images/acoffeetruck.jpg" />  
-          <div class="truck-description">
-            <h2>A Coffee Truck</h2>
-            <span class="tag">coffee</span>
-          </div>
-          <a data-twitter="acoffeetruck" href="http://twitter.com/ACoffeeTruck">@acoffeetruck</a>
-          <div class="latest-tweet"></div>
-        </li>
-        <li class="truck"> 
-          <img src="http://placehold.it/150x100" />  
-          <div class="truck-description">
-            <h2>Salivation Station</h2>
-            <span class="tag">wraps &amp; sandwiches</span>
-          </div>
-          <a data-twitter="brfoodtruck" href="http://twitter.com/brfoodtruck">@brfoodtruck</a>
-          <div class="latest-tweet"></div>
-        </li>
-        <li class="truck"> 
-          <img src="images/threebones.jpg" />  
-          <div class="truck-description">
-            <h2>Three Bones Catering</h2>
-            <span class="tag">cajun</span>
-          </div>
-          <a data-twitter="ThreeBonesCater" href="http://twitter.com/ThreeBonesCater">@ThreeBonesCater</a> &amp;
-          <a href="http://www.facebook.com/pages/Three-Bones-Catering-Company/110618055666641">Facebook</a>
-          <div class="latest-tweet"></div>
-        </li>
-        <li class="truck"> 
-          <img src="http://placehold.it/150x100" />  
-          <div class="truck-description">
-            <h2>Latte e Miele</h2>
-            <span class="tag">gelato</span>
-          </div>
-          <a data-twitter="lemgelato" href="http://twitter.com/LeMGelato">@lemgelato</a> &amp;   
-          <a href="http://latteemielegelato.com/">website</a>
-          <div class="latest-tweet"></div>
-        </li>
-        <li class="truck"> 
-          <img src="images/ninjasnowballs.jpeg" />  
-          <div class="truck-description">
-            <h2>Ninja Snowballs</h2>
-            <span class="tag">snowballs</span>
-          </div>
-          <a data-twitter="ninjasnowballs" href="http://twitter.com/NinjaSnowballs">@ninjasnowballs</a> &amp;
-          <a href="http://www.facebook.com/ninjasnowballs">facebook</a>
-          <div class="latest-tweet"></div>
-        </li>
-      </ul>  
-    </section>
-    <footer>
-      Created by <a href="http://jacksonfox.org">Jackson Fox</a><br />
-      <a href="mailto:jacksonfox@gmail.com?subject=Food Truck Suggestion">Want to add a truck to the list</a>?<br />
-      Version 0.3
-  </div>  
   <!--
     Credits...
     CSS3 Polaroids: http://www.zurb.com/playground/css3-polaroids/ & http://line25.com/tutorials/how-to-create-a-pure-css-polaroid-photo-gallery
