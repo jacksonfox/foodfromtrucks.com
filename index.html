@@ -18,7 +18,8 @@
     header { margin: 40px 0px 0px; }
     header p { font-family: "MisoLight"; font-size: 48px; margin: 0px; text-transform: uppercase; color: #BB7766; }
     a { text-decoration: none; color: #BB7766; }                                                                                                  
-    #truck-menu, #truck-info { width: 810px; margin: 0px auto; text-align: center; }
+    #truck-menu, .truck-info { width: 810px; margin: 0px auto; text-align: center; }
+    .truck-info h3 { font-family: "MisoLight"; font-size: 48px; text-transform: uppercase; color: #BB7766; }
     .truck-nav { list-style-type: none; margin: 0px 0px 40px; padding: 0px; overflow: hidden; }
     .truck-nav li { display: inline-block; margin: 0px 0px 10px 0px; padding: 5px 10px; background: #fff; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; box-shadow: #fac9c0 1px 1px 0px; }
     .truck-nav li + li { margin-left: 10px; }
@@ -67,7 +68,7 @@
         <li><a href="#ohgollytamale">Oh Golly Tamale</a></li>
       </ul>
     </nav>     
-    <section id="truck-info">
+    <section class="truck-info" id="baton-rouge-trucks">
       <ul class="truck-list">
         <li id="acoffeetruck" class="truck"> 
           <img src="images/acoffeetruck.jpg" />  
@@ -184,6 +185,21 @@
           <div class="latest-tweet"></div>
         </li>
       </ul>  
+    </section>
+    <section class="truck-info" id="nearby-trucks">
+      <h3>Nearby Food Trucks</h3>
+      <ul class="truck-list">
+        <li id="garcias" class="truck"> 
+          <img src="images/garcias.jpeg" />  
+          <div class="truck-description">
+            <h2>Garcia's Taco and Grill</h2>
+            <span class="tag">tacos</span>
+          </div>
+          <a data-twitter="gtgllc" href="http://twitter.com/GTGLLC">@gtgllc</a> &amp;
+          <a href="http://www.facebook.com/GarciasTacoandGrill">Facebook</a>
+          <div class="latest-tweet"></div>
+        </li>
+      </ul>
     </section>
     <footer>
       Created by <a href="http://jacksonfox.org">Jackson Fox</a><br />
