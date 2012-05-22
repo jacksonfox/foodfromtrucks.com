@@ -67,6 +67,7 @@
         <li><a href="#ignatiusreilly">Ignatius Reilly's</a></li>
         <li><a href="#ohgollytamale">Oh Golly Tamale</a></li>
         <li><a href="#garcias">Garcia's Taco and Grill</a></li>
+        <li><a href="#chickenshack">Chicken Shack Express</a></li>
       </ul>
     </nav>     
     <section class="truck-info" id="baton-rouge-trucks">
@@ -79,6 +80,17 @@
           </div>
           <a data-twitter="acoffeetruck" href="http://twitter.com/ACoffeeTruck">@acoffeetruck</a>
           <div class="latest-tweet"></div>
+        </li>
+        <li id="chickenshack" class="truck"> 
+          <img src="images/chickenshack.jpeg" />  
+          <div class="truck-description">
+            <h2>Chicken Shack Express</h2>
+            <span class="tag">fried chicken</span>
+          </div>
+          <!-- <a data-twitter="ChickenShackExpress" href="http://twitter.com/ChickenShackExpress">@ChickenShackExpress</a> &amp;    -->
+          <a href="https://www.facebook.com/pages/Chicken-Shack/151035401638307">facebook</a> &amp;   
+          <a href="http://www.chickenshack.org/">website</a>
+          <!-- <div class="latest-tweet"></div> -->
         </li>
         <li id="cubanconnection" class="truck"> 
           <img src="images/cuban-connection.jpg" />  
@@ -225,18 +237,22 @@
     $(document).ready(function(){
       $('.truck').each(function(){
         var twitter = $(this).find('a[data-twitter]').data('twitter');
-        $.ajax({
-          url: "http://api.twitter.com/1/statuses/user_timeline.json",
-          dataType: 'jsonp',
-          context: this,                                                  
-          data: ({
-            screen_name: twitter,
-            count: '1'
-          }),
-          success: function(data) {                                    
-            $(this).find('.latest-tweet').text(data[0].text);
-          }
-        })
+        if (twitter) {
+          $.ajax({
+            url: "http://api.twitter.com/1/statuses/user_timeline.json",
+            dataType: 'jsonp',
+            context: this,                                                  
+            data: ({
+              screen_name: twitter,
+              count: '1'
+            }),
+            success: function(data) {                                    
+              $(this).find('.latest-tweet').text(data[0].text);
+            }
+          });          
+        } else {
+          // console.log('[debug] failed to find twitter name for ' + $(this).attr('id'));
+        }
       });
     });    
   
