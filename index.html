@@ -19,7 +19,7 @@
     header p { font-family: "MisoLight"; font-size: 48px; margin: 0px; text-transform: uppercase; color: #BB7766; }
     a { text-decoration: none; color: #BB7766; }                                                                                                  
     #truck-menu, .truck-info { width: 810px; margin: 0px auto; text-align: center; }
-    .truck-info h3 { font-family: "MisoLight"; font-size: 48px; text-transform: uppercase; color: #BB7766; }
+    .truck-info h3 { font-family: "MisoLight"; font-size: 48px; text-transform: uppercase; color: #BB7766; font-weight: normal; }
     .truck-nav { list-style-type: none; margin: 0px 0px 40px; padding: 0px; overflow: hidden; }
     .truck-nav li { display: inline-block; margin: 0px 0px 10px 0px; padding: 5px 10px; background: #fff; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; box-shadow: #fac9c0 1px 1px 0px; }
     .truck-nav li + li { margin-left: 10px; }
@@ -45,7 +45,7 @@
     }                                                                                                                                         
     .tag { color: rgba(0,0,0,0.5); background: rgba(255,255,255,0.75); font-size: 12px; line-height: 14px; padding: 2px 6px 4px; margin: 5px 10px; float: left; }
   </style>   
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
 <body>                          
   <div id="container">  
@@ -87,10 +87,10 @@
             <h2>Chicken Shack Express</h2>
             <span class="tag">fried chicken</span>
           </div>
-          <!-- <a data-twitter="ChickenShackExpress" href="http://twitter.com/ChickenShackExpress">@ChickenShackExpress</a> &amp;    -->
+          <a data-twitter="ChickenShackExp" href="http://twitter.com/ChickenShackExp">@ChickenShackExp</a> &amp;   
           <a href="https://www.facebook.com/pages/Chicken-Shack/151035401638307">facebook</a> &amp;   
           <a href="http://www.chickenshack.org/">website</a>
-          <!-- <div class="latest-tweet"></div> -->
+          <div class="latest-tweet"></div>
         </li>
         <li id="cubanconnection" class="truck"> 
           <img src="images/cuban-connection.jpg" />  
@@ -112,7 +112,7 @@
           <div class="truck-links">
             <a data-twitter="curbsidetruck" href="http://twitter.com/curbsidetruck">@curbsidetruck</a> &amp;       
             <a href="http://www.weeatthestreet.com/">website</a>
-          </p>
+          </div>
           <div class="latest-tweet"></div>
         </li>
         <li id="freshjunkie" class="truck"> 
@@ -245,13 +245,14 @@
             data: ({
               screen_name: twitter,
               count: '1'
-            }),
-            success: function(data) {                                    
-              $(this).find('.latest-tweet').text(data[0].text);
+            })
+          }).done(function(response) {  
+            var latest_tweet = $(this).find('.latest-tweet');
+            if (latest_tweet) {
+              var tweet = response[0].text;
+              latest_tweet.html(tweet);
             }
           });          
-        } else {
-          // console.log('[debug] failed to find twitter name for ' + $(this).attr('id'));
         }
       });
     });    
