@@ -1,8 +1,8 @@
-#foodfromtrucks.com
+# foodfromtrucks.com
 
 Site source files for old food truck site at [http://foodfromtrucks.com](http://foodfromtrucks.com).
 
-##Credits
+## Credits
 
 * [Color Scheme (Chili Octpus on ColourLovers)](http://www.colourlovers.com/palette/164869/chili_octopus)
 * [Miso Font](http://www.fontsquirrel.com/fonts/Miso)
